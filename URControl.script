@@ -1,0 +1,63 @@
+def unnamed():
+  set_tool_voltage(0)
+  step_count_7c4a3a62_69e6_4e88_a598_298e544e75b1 = 0
+  thread Step_Counter_Thread_14968234_9143_4056_9a9d_ffb5e47098f9():
+    while (True):
+      step_count_7c4a3a62_69e6_4e88_a598_298e544e75b1 = step_count_7c4a3a62_69e6_4e88_a598_298e544e75b1 + 1
+      sync()
+    end
+  end
+  run Step_Counter_Thread_14968234_9143_4056_9a9d_ffb5e47098f9()
+  set_tcp(p[-0.002887055998106316,-0.030854420491097045,0.18643749402818094,0.0,0.0,0.0])
+  set_payload(0.6, [-0.008, 0.004, 0.13])
+  set_safety_mode_transition_hardness(1)
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_gravity([0.0, 0.0, 9.82])
+  # begin: URCap Installation Node
+  #   Source: External Control, 1.0.4, FZI Research Center for Information Technology
+  #   Type: External Control
+  # end: URCap Installation Node
+  # begin: URCap Installation Node
+  #   Source: Robotiq_Copilot, 1.14.4.3276, Robotiq Inc.
+  #   Type: Copilot
+  # end: URCap Installation Node
+  while (True):
+    $ 1 "Robot Program"
+    $ 2 "MoveJ"
+    $ 3 "HomePos" "breakAfter"
+    movej(get_inverse_kin(p[.442242886903, .075844349489, .463387091859, -1.419924494783, 1.327693346209, -1.083277985965], qnear=[2.831940174102783, -0.31194860139955694, -1.7812932173358362, -0.8026230970965784, -1.2274435202227991, 6.166308403015137]), a=1.3962634015954636, v=1.0471975511965976)
+    $ 4 "Wait: 0.5"
+    sleep(0.5)
+    $ 5 "MoveJ"
+    $ 6 "RotX" "breakAfter"
+    movej(get_inverse_kin(p[.429562846711, .078059329550, .509484434746, -1.300596784646, 1.215920698793, -1.182422443532], qnear=[2.831472396850586, -0.31181651750673467, -1.784022633229391, -0.9736745993243607, -1.227395836506978, -0.06714231172670537]), a=1.3962634015954636, v=1.0471975511965976)
+    $ 7 "Wait: 0.5"
+    sleep(0.5)
+    $ 8 "MoveJ"
+    $ 9 "RotZ" "breakAfter"
+    movej(get_inverse_kin(p[.223994517082, .319159465177, .549501495486, -1.465610636462, .275987327855, .136864939080], qnear=[2.8315083980560303, -0.31002980867494756, -1.7271679083453577, -0.7594907919513147, -6.056744117532865, -0.0649345556842249]), a=1.3962634015954636, v=1.0471975511965976)
+    $ 10 "Wait: 0.5"
+    sleep(0.5)
+    $ 11 "MoveJ"
+    $ 12 "RotYPrep" "breakAfter"
+    movej(get_inverse_kin(p[-.054843800790, .129568640924, .220768433238, -2.119867007386, -1.742342692031, .333794175129], qnear=[2.83178400993347, -0.310521427785055, -1.7685192267047327, -2.1856377760516557, -4.7102126518832605, 6.166260242462158]), a=1.3962634015954636, v=1.0471975511965976)
+    $ 13 "Wait: 0.5"
+    sleep(0.5)
+    $ 14 "MoveJ"
+    $ 15 "RotY" "breakAfter"
+    movej(get_inverse_kin(p[.406907828383, -.067761853136, .302742546629, 1.347850833368, .925503944347, .753905346170], qnear=[2.8318200111389165, -0.3105576674090784, -1.678525749837057, 2.001286029815674, -4.543477598820821, 6.166224479675293]), a=1.3962634015954636, v=1.0471975511965976)
+    $ 16 "Wait: 0.5"
+    sleep(0.5)
+    $ 17 "MoveJ"
+    $ 18 "HomePrep" "breakAfter"
+    movej(get_inverse_kin(p[-.142371197079, .110450337984, .376157743291, -1.712262562347, -1.538929215983, .798149902810], qnear=[2.8318438529968266, -0.42344981828798467, -1.6878278891192826, -1.6487944761859339, -4.5437533299075525, 6.166332721710206]), a=1.3962634015954636, v=1.0471975511965976)
+    $ 19 "Wait: 0.5"
+    sleep(0.5)
+  end
+end
